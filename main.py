@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import openpyxl
+#import openpyxl
 from budget import get_data, revestimento, calha, forro, esquadria, porta, piso, telha, alvenaria
 
 st.set_page_config(page_title='Custo Referencial de Serviços',
