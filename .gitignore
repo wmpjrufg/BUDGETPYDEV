@@ -1,5 +1,6 @@
 /VitorPFC
-/__pycache__
+
+__pycache__/
 
 
 novo_arquivo.csv
