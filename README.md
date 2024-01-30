@@ -12,14 +12,3 @@ pip install streamlit
 pip install openpyxl
 ```
 
-# Use the environment
-
-```bash
-source VitorPFC/bin/activate
-```
-
-# Run Project
-
-```bash
-streamlit run main.py
-```
