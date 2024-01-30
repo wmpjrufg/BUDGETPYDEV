@@ -3,7 +3,7 @@ import pandas as pd
 
 @st.cache_data
 def get_data():
-    caminho = './budgetpydev/Custo Referencial de Serviços - T156.xlsx'
+    caminho = './Custo Referencial de Serviços - T156.xlsx'
     tabela_goinfra = pd.read_excel(caminho)
     tabela_goinfra.drop([0,1,2,3,4], axis = 0, inplace = True)
 
