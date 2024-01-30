@@ -45,7 +45,7 @@ with st.container():
 
     if arquivo is not None:
         dados = pd.read_csv(arquivo, sep=';')
-        dados = dados.drop(index=0)
+        #dados = dados.drop(index=0)
         # Check and handle non-numeric values in 'ID GOINFRA' column
         codigos = pd.to_numeric(dados['ID GOINFRA'], errors='coerce')
 
@@ -81,110 +81,93 @@ with st.container():
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
                 area = dados['Área']
-                #st.write(area)
-                #area = dados['Área'].str.replace(',', '.').astype(float)
-
+                area = dados['Área'].str.replace(',', '.').astype(float)
 
                 for i in range(len(area)):
-                    preco_total.append(area[i+1] * p_mo[i])
+                    preco_total.append(area[i] * p_mo[i])
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
-
-
             
             elif "CALHA" in service:
-                
                 preco_total = []
                 arquivo_cvs = dados.copy()
                 arquivo_cvs['Preço unitário'] = p_mo
             
                 comprimento = dados['Comprimento'].str.replace(',', '.').astype(float)
-            
                 for i in range(len(comprimento)):
-                    preco_total.append(float(comprimento[i+1]) * p_mo[0])
+                    preco_total.append(float(comprimento[i]) * p_mo[0])
             
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(f'novo_arquivo.csv', sep = ';', index = False)
 
-
-            elif "FORRO" in servico:
-        
+            elif "FORRO" in service:
                 preco_total = []
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
-
+                
                 area = dados['Área'].str.replace(',', '.').astype(float)
-
                 for i in range(len(area)):
-                    preco_total.append(float(area[i+1]) * p_mo[i])
+                    preco_total.append(float(area[i]) * p_mo[i])
 
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
 
-            elif "ESQUADRIA" in servico:
+            elif "ESQUADRIA" in service:
                 preco_total = []
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
 
                 QTD = dados['QTD']
-
                 for i in range(len(QTD)):
-                    preco_total.append(float(QTD[i+1]) * p_mo[i])
+                    preco_total.append(float(QTD[i]) * p_mo[i])
 
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
 
-            elif "PORTA" in servico:
+            elif "PORTA" in service:
                 preco_total = []
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
 
                 QTD = dados['QTD']
-
                 for i in range(len(QTD)):
-                    preco_total.append(float(QTD[i+1]) * p_mo[i])
+                    preco_total.append(float(QTD[i]) * p_mo[i])
 
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
 
-            elif "PISO" in servico:
+            elif "PISO" in service:
                 preco_total = []
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
 
                 area = dados['Área'].str.replace(',', '.').astype(float)
-                #area = dados['Área']
-
                 for i in range(len(area)):
-                    preco_total.append(float(area[i+1]) * p_mo[i-1])
+                    preco_total.append(float(area[i]) * p_mo[i-1])
 
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
         
-            elif "TELHA" in servico:
+            elif "TELHA" in service:
                 preco_total = []
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
 
                 area = dados['Área'].str.replace(',', '.').astype(float)
-                #area = dados['Área']
-
                 for i in range(len(area)):
-                    preco_total.append(float(area[i+1]) * p_mo[i])
+                    preco_total.append(float(area[i]) * p_mo[i])
 
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
 
-            elif "ALVENARIAS" in servico:
+            elif "ALVENARIAS" in service:
                 preco_total = []
                 arquivo_cvs = dados
                 arquivo_cvs['Preço unitário'] = p_mo
 
                 area = dados['Área'].str.replace(',', '.').astype(float)
-                #area = dados['Área']
-
                 for i in range(len(area)):
-                    preco_total.append(float(area[i+1]) * p_mo[i])
+                    preco_total.append(float(area[i]) * p_mo[i])
 
                 arquivo_cvs['Preço total'] = preco_total
                 arquivo_cvs.to_csv(arquivo, sep = ';', index = False)
