@@ -1,6 +1,6 @@
 # Deploy
 
-[Custo Referencial de Serviços](https://budgetpy.streamlit.app/){:target="\_blank" rel="noopener"}
+[Custo Referencial de Serviços](https://budgetpy.streamlit.app/)
 
 # Required libraries
 
