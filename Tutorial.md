@@ -9,4 +9,4 @@
 
 # Cálculo do orçamento
 
-  Ao acessar a plataforma, o usuário pode utilizar o menu "browse files" para fazer o *upload* da sua tabela de referência. Conforme mencionado anteriormente, o *software* reconhece automaticamente o tipo de levantamento e realiza a precificação correspondente. Após a precificação, a tela é modificada e exibe a tabela de quantitativos com o orçamento calculado, pronta para realizar o *download*, para isso, basta clicar em “Baixar arquivo”.  
+  Ao acessar a plataforma, o usuário pode utilizar o menu "browse files" para fazer o *upload* da sua tabela de referência. Conforme mencionado anteriormente, o *software* reconhece automaticamente o tipo de levantamento e realiza a precificação correspondente. Após a precificação, a tela é modificada e exibe a tabela de quantitativos com o orçamento calculado e pronta para realizar o *download*, para isso, basta clicar em “Baixar arquivo”.  
